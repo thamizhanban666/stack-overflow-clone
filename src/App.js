@@ -1,25 +1,50 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/navbar/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Login from './components/login/Login';
+import SignUp from './components/signup/SignUp';
+import Sidebar from './components/sidebar/Sidebar';
+import Home from './components/home/Home';
+import AddQuestion from './components/add-question/AddQuestion';
+import ViewQuestion from './components/view-question/ViewQuestion';
+import React, { useContext, useState } from 'react';
+
+const myContext = React.createContext();
+const MyProvider = myContext.Provider;
 
 function App() {
+  const [user, setUser] = useState({});
+  const [showSidebar, setShowSidebar] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <MyProvider value={{user, setUser,showSidebar, setShowSidebar}}>
+        <div>
+          <Navbar />
+          <div className=''>
+            <div className='d-none d-md-block'>
+              <Sidebar />
+            </div>  
+            <div className={`d-md-none d-${showSidebar?"block":"none"}`}>
+              <Sidebar />
+            </div>  
+            <div className='margin'>
+              <Routes >
+                <Route path='/' element={<Login/>} />
+                <Route path='/signup' element={<SignUp/>} />
+                <Route path='/login' element={<Login/>} />
+                <Route path='/home' element={<Home/>} />
+                <Route path='/add-question' element={<AddQuestion />} />
+                <Route path='/view-question/:id' element={<ViewQuestion />} />
+              </Routes>
+            </div>
+          </div>
+        </div>
+      </MyProvider>
+    </BrowserRouter>   
   );
-}
+} 
 
 export default App;
+export {myContext};

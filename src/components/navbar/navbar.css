@@ -1,0 +1,58 @@
+nav{
+  border-top: 3px solid rgba(255, 115, 0, 0.815) ;
+  box-shadow: 0 1px 5px 0px rgb(214, 212, 212);
+}
+.search-container{
+  /* width: 600px; */
+  min-width: 35vw;
+  height: 35px;
+  /* max-width: 60vw; */
+  border: 1px solid rgb(197, 187, 187);
+  background-color: white;
+}
+.width{
+  width: 90%;
+}
+input:focus {
+    outline: none;
+}
+.btns > button{
+  font-size:13px;
+  padding: 5px;
+  margin: 7px;
+}
+.btns > button:hover{
+  background-color: rgb(212, 230, 236);
+}
+.btn-log{
+  background-color: rgba(225,236,244,1);
+  border: 1px solid rgb(197, 187, 187);
+  font-size:14px;
+  padding: 5px 8px;
+  text-decoration: none;
+}
+.btn-log:hover{
+  background-color:rgb(190, 216, 236) ;
+}
+.btn-sign{
+  background-color: rgba(10,149,255);
+  border: 1px solid rgb(197, 187, 187);
+  font-size:14px;
+  padding: 5px 8px;
+  text-decoration: none;
+}
+.btn-sign:hover{
+  background-color:rgb(8, 127, 218);
+}
+
+.avatar{
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  padding:3px;
+  font-weight: bold;
+  font-size: large;
+  color: #fff;
+  background-color: rgb(167, 163, 163);
+  border: 0.5px solid rgb(105, 102, 102);
+}

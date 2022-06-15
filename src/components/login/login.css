@@ -1,0 +1,51 @@
+#log-body{
+  margin: 0;
+  background-color: rgb(241,242,243);
+  min-height:700px;
+  padding-top: 20px;
+}
+#log-section{
+  max-width: 275px;
+}
+.log-btns{
+  display: block;
+  margin: 8px 0;
+  width: 100%;
+  border: 1px solid rgb(218, 213, 213);
+  border-radius: 4px;
+  box-shadow: 0 0 7px 1px rgb(218, 214, 214);
+  height: 38px;
+}
+.bg-fb{
+  background-color: rgb(56,84,153)
+}
+#log-section > div{
+  padding: 20px 22px;
+  margin-top:18px;
+  background-color: #fff;
+  border: 1px solid rgb(218, 213, 213);
+  border-radius: 6px;
+  box-shadow: 0 0 7px 1px rgb(218, 214, 214);
+}
+.log-inp{
+  border: 1px solid rgb(194, 189, 189);
+  width: 100%;
+  border-radius: 3px;
+  height: 32px;
+}
+.login-btn{
+  display: block;
+  width: 100%;
+  height: 38px;
+  margin-top: 18px;
+  background-color: rgb(10,149,255);
+  color: #fff;
+  border: 1px solid rgb(218, 213, 213);
+  border-radius: 4px;  
+}
+.font-sm{
+  font-size:13px;
+}
+.fw-bold{
+  font-weight:600 !important;
+}

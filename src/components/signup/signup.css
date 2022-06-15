@@ -1,0 +1,54 @@
+#sign-body{
+  margin: 0;
+  background-color: rgb(241,242,243);
+  min-height:900px;
+  padding-top: 20px;
+}
+#sign-section{
+  max-width: 285px;
+}
+.sign-btns{
+  display: block;
+  margin: 8px 0;
+  width: 100%;
+  border: 1px solid rgb(218, 213, 213);
+  border-radius: 4px;
+  box-shadow: 0 0 7px 1px rgb(218, 214, 214);
+  height: 38px;
+}
+.bg-fb{
+  background-color: #4267B2;
+}
+#sign-section > div{
+  padding: 20px 22px;
+  margin-top:18px;
+  background-color: #fff;
+  border: 1px solid rgb(218, 213, 213);
+  border-radius: 6px;
+  box-shadow: 0 0 7px 1px rgb(218, 214, 214);
+}
+.sign-inp{
+  border: 1px solid rgb(194, 189, 189);
+  width: 100%;
+  border-radius: 3px;
+  height: 32px;
+}
+.signup-btn{
+  display: block;
+  width: 100%;
+  height: 38px;
+  margin-top: 18px;
+  background-color: rgb(13, 150, 255);
+  color: #fff;
+  border: 1px solid rgb(218, 213, 213);
+  border-radius: 4px;  
+}
+.font-sm{
+  font-size:13px;
+}
+.font-xsm{
+  font-size:11px;
+}
+.fw-bold{
+  font-weight:600 !important;
+}

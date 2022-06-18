@@ -1,4 +1,3 @@
-import { Button } from 'bootstrap';
 import React, { useContext, useState } from 'react';
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
@@ -92,7 +91,7 @@ function AddQuestion() {
                                 <small>
                                     Add up to 5 tags to describe what your question is about
                                 </small>
-                                <TagsInput value={tags} onChange={setTags} name='tags' placeHolder='press enter to add new tag' />
+                                <TagsInput value={tags} onChange={setTags} name='tags' placeHolder='press enter to add' />
                             </div>
                         </div>
                     </div>

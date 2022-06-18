@@ -8,12 +8,11 @@ import { myContext} from '../../App'
  
 function Navbar() {
   const userContext = useContext(myContext); 
-
   return (
     <nav className="bg-light p-0 px-xl-5 sticky-top text-center d-flex justify-content-center">
       <div className="d-flex align-items-center justify-content-center flex-fill">
         <button className='btn p-0 border border-0 d-md-none ' onClick={() => { userContext.setShowSidebar(!userContext.showSidebar) }}><img src={menu}></img></button>
-        <a id='logo' className='d-flex align-items-center text-decoration-none' style={{cursor:"pointer"}} onClick={()=>window.location.reload()}>
+        <a id='logo' className='d-flex align-items-center text-decoration-none' style={{cursor:"pointer"}} >
           <span className='ms-1'><img src={logo}></img></span>
           <span className='fs-5 ms-1 d-none d-sm-block text-dark'>stack<span className='fs-5 fw-bold'>overflow</span></span>
         </a>
@@ -33,17 +32,12 @@ function Navbar() {
           {
             userContext.user.email?
               <div>
-                <div id="avatar" className='dropdown m-1 '>
-                <button className="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  {userContext.user.name? userContext.user.name[0]:""}
-                </button>
-                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li className='text-center'><h6 className="dropdown-header">{userContext.user.name? userContext.user.name:""}</h6></li>
-                  <li className='text-center'><h6 className="dropdown-header">{userContext.user.email? userContext.user.email:""}</h6></li>
-                  <li className='text-center'><Link to="/login"><button className='btn btn-sm btn-secondary' onClick={()=>{userContext.setUser({}); window.localStorage.removeItem("myToken")}}>Logout</button></Link></li>
-                </ul>
-                
+                <div id="avatar" className='m-1 '>
+                  <button className="btn btn-sm btn-secondary" type="button" onClick={()=>userContext.setAvatarToggle(!userContext.avatarToggle)}>
+                    {userContext.user.name? userContext.user.name[0]:""}
+                  </button>
                 </div>
+               
               </div>
             :
               <div>
@@ -51,8 +45,7 @@ function Navbar() {
                 <Link to='signup' className="rounded-1 text-light btn-sign text-nowrap" type="submit">Sign up</Link> 
               </div>
           }
-        </div>
-        
+        </div>     
       </div>
     </nav>
   )

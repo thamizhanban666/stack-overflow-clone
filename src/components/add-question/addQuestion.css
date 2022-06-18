@@ -11,7 +11,7 @@
   padding: 30px 15px;
   display: flex;
   flex-direction: column;
-  width: 95%;
+  width: 100%;
   max-width: 800px;
 }
 
@@ -28,7 +28,7 @@
 
 .question-container {
   display: flex;
-  padding: 15px;
+  padding: 5px;
   background-color: #fff;
   border: 1px solid #eee;
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.15)
@@ -38,6 +38,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin:5px
 }
 
 .question-option {

@@ -56,3 +56,14 @@ input:focus {
   background-color: rgb(167, 163, 163);
   border: 0.5px solid rgb(105, 102, 102);
 }
+
+.avatarToggle{
+  width: min-content;
+  padding: 7px 10px 0 10px;
+  background-color: rgb(247, 244, 244);
+  border: 2px solid rgb(164, 164, 194);
+  border-radius: 10px;
+  position: fixed;
+  right: 0px;
+  top: 50px;
+}

@@ -35,8 +35,7 @@ function Login() {
               userContext.setUser(tokenObj.data.user);
               navigate("/home");
             } catch (error) {
-              console.log(error);
-              alert("login error")
+              alert("login with registered email and correct password")
             }     
          }
    })

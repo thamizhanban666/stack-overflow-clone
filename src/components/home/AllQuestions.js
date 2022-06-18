@@ -37,11 +37,7 @@ function AllQuestions(props) {
                     >
                         <div className='text-wrap'>{ReactHtmlParser(truncate(props.question?.body,200))}</div>
                     </div>
-                    <div
-                        style={{
-                            display: "flex",
-                        }}
-                    >
+                    <div className='d-flex flex-wrap' >
                         {
                             props.question?.tags.map((tag) => {
                                 return (

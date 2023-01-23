@@ -32,7 +32,7 @@ function AddQuestion() {
                     tags: tags,
                     user: usercontext.user
                 }
-                await axios.post('https://stack-overflow-thamizhanban.herokuapp.com/api/question', bodyJSON,
+                await axios.post('https://stack-overflow-clone-thamizhanban.vercel.app/api/question', bodyJSON,
                     {
                         headers: {
                             Authorization: window.localStorage.getItem("myToken")

@@ -34,7 +34,7 @@ function ViewQuestion() {
                     answer: answer,
                     user: userContext.user
                 }    
-                await axios.post('https://stack-overflow-thamizhanban.herokuapp.com/api/answer', body,
+                await axios.post('https://stack-overflow-clone-thamizhanban.vercel.app/api/answer', body,
                     {
                         headers: {
                             Authorization: window.localStorage.getItem("myToken"),
@@ -67,7 +67,7 @@ function ViewQuestion() {
                 user: userContext.user
             }
             try {
-                await axios.post(`https://stack-overflow-thamizhanban.herokuapp.com/api/comment/${id}`, body,
+                await axios.post(`https://stack-overflow-clone-thamizhanban.vercel.app/api/comment/${id}`, body,
                     {
                         headers: {
                             Authorization: window.localStorage.getItem("myToken"),
@@ -85,7 +85,7 @@ function ViewQuestion() {
 
     useEffect(() => {
         async function getQuestionData() {
-            await axios.get(`https://stack-overflow-thamizhanban.herokuapp.com/api/question/${id}`)
+            await axios.get(`https://stack-overflow-clone-thamizhanban.vercel.app/api/question/${id}`)
                 .then((res) => setQuestionData(res.data[0]))
                 .catch((err) => console.log(err));
             }

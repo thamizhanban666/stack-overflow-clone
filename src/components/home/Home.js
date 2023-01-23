@@ -10,7 +10,7 @@ function Home() {
 
     useEffect(() => {
         async function getQuestion() {
-            await axios.get("https://stack-overflow-thamizhanban.herokuapp.com/api/question").then((res) => {
+            await axios.get("https://stack-overflow-clone-thamizhanban.vercel.app/api/question").then((res) => {
                 setQuestions(res.data.reverse());
             }).catch((err) => {
                 console.log(err);

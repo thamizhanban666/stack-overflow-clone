@@ -30,7 +30,7 @@ function Login() {
          },
          onSubmit: async (values) => {               
             try {
-              let tokenObj = await axios.post("https://stack-overflow-thamizhanban.herokuapp.com/api/user/login", values);
+              let tokenObj = await axios.post("https://stack-overflow-clone-thamizhanban.vercel.app/api/user/login", values);
               window.localStorage.setItem("myToken", tokenObj.data.token);
               userContext.setUser(tokenObj.data.user);
               navigate("/home");

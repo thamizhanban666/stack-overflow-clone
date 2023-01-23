@@ -32,7 +32,7 @@ function SignUp() {
          },
          onSubmit: async (values) => {               
             try {
-              await axios.post("https://stack-overflow-thamizhanban.herokuapp.com/api/user/signup", values);
+              await axios.post("https://stack-overflow-clone-thamizhanban.vercel.app/api/user/signup", values);
               swal({
                 title: `email - ${values.email}`,
                 text: "Succefully Registered",
